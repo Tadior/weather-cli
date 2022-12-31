@@ -1,11 +1,11 @@
 import chalk from "chalk";
 import dedent from "ts-dedent";
 
-const printError = (error: Error) => {
-  console.log(chalk.bgRed("Error: ", error));
+const printError = (errorMessage: string) => {
+  console.log(chalk.bgRed("Error:"), errorMessage);
 };
 const printSuccess = (message: string) => {
-  console.log(chalk.bgRed("Success: ", message));
+  console.log(chalk.bgGreen("Success:"), message);
 };
 const printHelp = () => {
   console.log(
