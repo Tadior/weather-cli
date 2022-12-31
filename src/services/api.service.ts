@@ -1,6 +1,7 @@
 import { getKeyValue } from "./storage.service";
 import { TOKEN_DICTIONARY } from "../constants/TOKEN_DICTIONARY";
 import axios from "axios";
+import { weatherResponse } from "../types/type";
 
 export const getWeather = async (city: string) => {
   const token = await getKeyValue(TOKEN_DICTIONARY.token);
@@ -20,5 +21,5 @@ export const getWeather = async (city: string) => {
       },
     }
   );
-  return data;
+  return data as weatherResponse;
 };
